@@ -28,7 +28,4 @@ RUN focuslight new
 VOLUME ["/focuslight"]
 EXPOSE 5125
 WORKDIR /focuslight
-RUN focuslight init
-ENTRYPOINT ["focuslight"]
-CMD ["start"]
-
+CMD ["bash", "--login", "-c", "focuslight init; focuslight start"]
